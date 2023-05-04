@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title><%=bookmark.name%></title>
+    <style>
+      /* color */
+      :root {
+        color: #505050;
+        --main-color: #ff8ca5;
+        --pale-color: #fff0f0;
+      }
+
+      /* box layout */
+      @media (min-width: 800px) {
+        .content {
+          display: flex;
+          justify-content: center;
+          column-gap: 0.75em;
+        }
+        .preferred-box {
+          order: 1;
+          min-width: 14em;
+          max-width: 14em;
+        }
+        .toc-box {
+          order: -1;
+          min-width: 11em;
+          max-width: 11em;
+        }
+      }
+
+      /* global style */
+      a:link, a:visited {
+        text-decoration: none;
+      }
+      a:active, a:hover {
+        text-decoration: underline;
+      }
+
+      /* header style */
+      h1 {
+        text-align: center;
+      }
+
+      /* toc style */
+      .toc {
+        margin: 0.5em 0;
+        border: thin solid var(--main-color);
+        border-radius: 10px;
+        padding: 0.5em;
+      }
+      .toc-category {
+        font-weight: bold;
+      }
+      .toc-group {
+        padding-left: 1em;
+      } 
+
+      /* category style */
+      .category {
+        margin: 0.5em 0;
+        border-radius: 10px;
+      }
+      .category h2 {
+        margin: 0 0 0.25em;
+        border: thin solid var(--main-color);
+        border-radius: 8px;
+        padding-left: 0.5em;
+        background-color: var(--main-color);
+        color: white;
+      }
+      .category h3 {
+        margin: 0.25em;
+        padding-left: 0.5em;
+        font-size: 90%;
+      }
+      .category ul {
+        margin: 0;
+      }
+      .category .comment {
+        font-size: 80%;
+      }
+
+      /* preferrd category style */
+      .preferred {
+        border: thin solid var(--main-color);
+        background-color: var(--pale-color);
+      }
+      .preferred h2 {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .preferred ul {
+        padding-left: 1.5em;
+      }
+      .preferred li {
+        list-style-type: none;
+      }
+
+      /* footer style */
+      .footer {
+        margin: 0.5em 0;
+        border-top: thin solid var(--main-color);
+        padding: 1em 0;
+        text-align: center;
+        font-size: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%=bookmark.name%></h1>
+
+    <div class="content">
+
+% if not bookmark.preferred_categories.empty?
+      <div class="preferred-box">
+%   bookmark.preferred_categories.each do |category|
+        <div class="category preferred">
+          <h2><a name="<%=category.id%>"><%=category.name%></a></h2>
+%     category.groups.each do |group|
+%       if not group.name.empty?
+          <h3><a name="<%=group.id%>"><%=group.name%></a></h3>
+%       end
+%       group.sites.each do |site|
+%         main_page = site.main_page
+          <ul>
+            <li>
+              <a href="<%=main_page.url%>"><%=main_page.name%></a>
+%         if not site.sub_pages.empty?
+%           site.sub_pages.each do |sub_page|
+              / <a href="<%=sub_page.url%>"><%=sub_page.name%></a>
+%           end
+%         end
+%         if site.comment
+              <span class="comment"><%=site.comment%></span>
+%         end
+            </li>
+          </ul>
+%       end
+%     end
+        </div>
+%   end
+      </div>
+% end
+
+      <div class="toc-box">
+        <div class="toc">
+% bookmark.categories.each do |category|
+          <div class="toc-category"><a href="#<%=category.id%>"><%=category.name%></a></div>
+%   category.groups.select{|group| not group.name.empty?}.each do |group|
+          <div class="toc-group"><a href="#<%=group.id%>"><%=group.name%></a></div>
+%   end
+% end
+        </div>
+      </div>
+
+      <div class="main-box">
+% bookmark.categories.each do |category|
+        <div class="category">
+          <h2><a name="<%=category.id%>"><%=category.name%></a></h2>
+%   category.groups.each do |group|
+%     if not group.name.empty?
+          <h3><a name="<%=group.id%>"><%=group.name%></a></h3>
+%     end
+%     group.sites.each do |site|
+%       main_page = site.main_page
+          <ul>
+            <li>
+              <a href="<%=main_page.url%>"><%=main_page.name%></a>
+%       if not site.sub_pages.empty?
+%         site.sub_pages.each do |sub_page|
+              / <a href="<%=sub_page.url%>"><%=sub_page.name%></a>
+%         end
+%       end
+%       if site.comment
+              <span class="comment"><%=site.comment%></span>
+%       end
+            </li>
+          </ul>
+%     end
+%   end
+        </div>
+% end
+      </div>
+    </div>
+
+    <div class="footer"><%=bookmark.mtime%></div>
+  </body>
+</html>

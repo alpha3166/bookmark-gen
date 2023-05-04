@@ -1,0 +1,9 @@
+services:
+  ws:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bookmark-gen-dev
+    volumes:
+      - ../..:/bookmark-gen
+    working_dir: /bookmark-gen

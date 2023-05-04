@@ -1,0 +1,237 @@
+# Bookmark Example
+
+## Hot Links
+
+### Search Engines
+
+Google
+https://www.google.com/
+Map
+https://www.google.co.jp/maps/
+Alphabet
+
+Bing
+https://www.bing.com/
+Microsoft
+
+Yahoo!
+https://www.yahoo.com/
+
+### Wikipedia
+
+Wikipedia
+https://en.wikipedia.org/
+ja
+https://ja.wikipedia.org/
+fi
+https://fi.wikipedia.org/
+
+Wiktionary
+https://en.wiktionary.org/
+
+Wikibooks
+https://en.wikibooks.org/
+
+---
+
+## Dictionaries
+
+### English
+
+Merriam-Webster
+https://www.merriam-webster.com/
+
+Oxford Learner's Dictionaries
+http://www.oxforddictionaries.com/us
+
+Collins English Dictionary
+http://www.collinsdictionary.com/
+
+Dictionary.com
+http://www.dictionary.com/
+
+Online Plain Text English Dictionary
+http://www.mso.anu.edu.au/~ralph/OPTED/
+
+AllWords.com Multi-Lingual Dictionary
+http://www.allwords.com/
+
+Free Dictionary
+http://www.freedictionary.org/
+
+LookWAYup Translating Dictionary/Thesaurus
+http://lookwayup.com/free
+
+Dictionary/thesaurus
+http://www.thefreedictionary.com/
+
+Online Etymology Dictionary
+https://www.etymonline.com/
+
+### Japanese
+
+weblio
+https://www.weblio.jp/
+
+コトバンク
+https://kotobank.jp/
+
+### Finnish
+
+Kielitoimiston sanakirja
+https://www.kielitoimistonsanakirja.fi/
+
+bab.la Finnish-English dictionary 
+https://en.bab.la/dictionary/finnish-english/
+
+Suomienglantisanakirja.fi
+https://www.suomienglantisanakirja.fi/english.php
+
+## Misc
+
+### Test
+
+Word test
+http://vocabulary.ugent.be/
+Ghent University, Center for Reading Research
+
+Endangered Languages
+https://www.endangeredlanguages.com/
+
+## Programming
+
+### Languages
+
+Ada
+https://www.adaic.org/
+
+ALGOL
+https://en.wikipedia.org/wiki/ALGOL
+
+APL
+https://aplwiki.com/
+
+BASIC
+https://en.wikipedia.org/wiki/BASIC
+
+C
+https://www.iso.org/standard/74528.html
+
+C++
+https://isocpp.org/
+
+C#
+https://learn.microsoft.com/en-us/dotnet/csharp/
+
+Classic Visual Basic
+https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation
+
+COBOL
+https://en.wikipedia.org/wiki/COBOL
+
+Erlang
+https://www.erlang.org/
+
+Forth
+https://forth-standard.org/
+
+Fortran
+https://fortran-lang.org/
+
+Go
+https://go.dev/
+
+Haskell
+https://www.haskell.org/
+
+Java
+http://oracle.com/java/
+
+JavaScript
+https://www.ecma-international.org/publications-and-standards/standards/ecma-262/
+
+Kotlin
+https://kotlinlang.org/
+
+Lisp
+https://en.wikipedia.org/wiki/Lisp_(programming_language)
+
+Lua
+https://www.lua.org/
+
+MATLAB
+https://www.mathworks.com/products/matlab.html
+
+ML
+https://en.wikipedia.org/wiki/ML_(programming_language)
+
+Object Pascal
+https://en.wikipedia.org/wiki/Object_Pascal
+
+Pascal
+https://en.wikipedia.org/wiki/Pascal_(programming_language)
+
+Perl
+https://www.perl.org/
+
+PHP
+https://www.php.net/
+
+Prolog
+https://www.iso.org/standard/21413.html
+Part 2
+https://www.iso.org/standard/20775.html
+
+Python
+https://www.python.org/
+
+R
+https://www.r-project.org/
+
+Ruby
+https://www.ruby-lang.org/
+
+Rust
+https://www.rust-lang.org/
+
+SQL
+https://www.iso.org/standard/63555.html
+
+Scratch
+https://scratch.mit.edu/
+
+Shell script
+https://en.wikipedia.org/wiki/Shell_script
+
+Simula
+http://www.simula67.info/
+
+Smalltalk
+https://en.wikipedia.org/wiki/Smalltalk
+
+Swift
+https://developer.apple.com/swift/
+
+Visual Basic
+https://docs.microsoft.com/dotnet/visual-basic/
+
+### VCS
+
+RCS
+https://www.gnu.org/software/rcs/
+
+CVS
+http://cvs.nongnu.org/
+
+Subversion
+https://subversion.apache.org/
+
+Mercurial
+https://www.mercurial-scm.org/
+
+Git
+https://git-scm.com/
+Reference
+https://git-scm.com/docs/
+Book
+https://git-scm.com/book/en/v2/

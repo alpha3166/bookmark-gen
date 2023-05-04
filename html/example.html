@@ -1,0 +1,492 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Bookmark Example</title>
+    <style>
+      /* color */
+      :root {
+        color: #505050;
+        --main-color: #ff8ca5;
+        --pale-color: #fff0f0;
+      }
+
+      /* box layout */
+      @media (min-width: 800px) {
+        .content {
+          display: flex;
+          justify-content: center;
+          column-gap: 0.75em;
+        }
+        .preferred-box {
+          order: 1;
+          min-width: 14em;
+          max-width: 14em;
+        }
+        .toc-box {
+          order: -1;
+          min-width: 11em;
+          max-width: 11em;
+        }
+      }
+
+      /* global style */
+      a:link, a:visited {
+        text-decoration: none;
+      }
+      a:active, a:hover {
+        text-decoration: underline;
+      }
+
+      /* header style */
+      h1 {
+        text-align: center;
+      }
+
+      /* toc style */
+      .toc {
+        margin: 0.5em 0;
+        border: thin solid var(--main-color);
+        border-radius: 10px;
+        padding: 0.5em;
+      }
+      .toc-category {
+        font-weight: bold;
+      }
+      .toc-group {
+        padding-left: 1em;
+      } 
+
+      /* category style */
+      .category {
+        margin: 0.5em 0;
+        border-radius: 10px;
+      }
+      .category h2 {
+        margin: 0 0 0.25em;
+        border: thin solid var(--main-color);
+        border-radius: 8px;
+        padding-left: 0.5em;
+        background-color: var(--main-color);
+        color: white;
+      }
+      .category h3 {
+        margin: 0.25em;
+        padding-left: 0.5em;
+        font-size: 90%;
+      }
+      .category ul {
+        margin: 0;
+      }
+      .category .comment {
+        font-size: 80%;
+      }
+
+      /* preferrd category style */
+      .preferred {
+        border: thin solid var(--main-color);
+        background-color: var(--pale-color);
+      }
+      .preferred h2 {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .preferred ul {
+        padding-left: 1.5em;
+      }
+      .preferred li {
+        list-style-type: none;
+      }
+
+      /* footer style */
+      .footer {
+        margin: 0.5em 0;
+        border-top: thin solid var(--main-color);
+        padding: 1em 0;
+        text-align: center;
+        font-size: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bookmark Example</h1>
+
+    <div class="content">
+
+      <div class="preferred-box">
+        <div class="category preferred">
+          <h2><a name="c1">Hot Links</a></h2>
+          <h3><a name="g1">Search Engines</a></h3>
+          <ul>
+            <li>
+              <a href="https://www.google.com/">Google</a>
+              / <a href="https://www.google.co.jp/maps/">Map</a>
+              <span class="comment">Alphabet</span>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.bing.com/">Bing</a>
+              <span class="comment">Microsoft</span>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.yahoo.com/">Yahoo!</a>
+            </li>
+          </ul>
+          <h3><a name="g2">Wikipedia</a></h3>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/">Wikipedia</a>
+              / <a href="https://ja.wikipedia.org/">ja</a>
+              / <a href="https://fi.wikipedia.org/">fi</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wiktionary.org/">Wiktionary</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikibooks.org/">Wikibooks</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="toc-box">
+        <div class="toc">
+          <div class="toc-category"><a href="#c2">Dictionaries</a></div>
+          <div class="toc-group"><a href="#g3">English</a></div>
+          <div class="toc-group"><a href="#g4">Japanese</a></div>
+          <div class="toc-group"><a href="#g5">Finnish</a></div>
+          <div class="toc-category"><a href="#c3">Misc</a></div>
+          <div class="toc-group"><a href="#g6">Test</a></div>
+          <div class="toc-category"><a href="#c4">Programming</a></div>
+          <div class="toc-group"><a href="#g7">Languages</a></div>
+          <div class="toc-group"><a href="#g8">VCS</a></div>
+        </div>
+      </div>
+
+      <div class="main-box">
+        <div class="category">
+          <h2><a name="c2">Dictionaries</a></h2>
+          <h3><a name="g3">English</a></h3>
+          <ul>
+            <li>
+              <a href="https://www.merriam-webster.com/">Merriam-Webster</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.oxforddictionaries.com/us">Oxford Learner's Dictionaries</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.collinsdictionary.com/">Collins English Dictionary</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.dictionary.com/">Dictionary.com</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.mso.anu.edu.au/~ralph/OPTED/">Online Plain Text English Dictionary</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.allwords.com/">AllWords.com Multi-Lingual Dictionary</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.freedictionary.org/">Free Dictionary</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://lookwayup.com/free">LookWAYup Translating Dictionary/Thesaurus</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.thefreedictionary.com/">Dictionary/thesaurus</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.etymonline.com/">Online Etymology Dictionary</a>
+            </li>
+          </ul>
+          <h3><a name="g4">Japanese</a></h3>
+          <ul>
+            <li>
+              <a href="https://www.weblio.jp/">weblio</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://kotobank.jp/">コトバンク</a>
+            </li>
+          </ul>
+          <h3><a name="g5">Finnish</a></h3>
+          <ul>
+            <li>
+              <a href="https://www.kielitoimistonsanakirja.fi/">Kielitoimiston sanakirja</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.bab.la/dictionary/finnish-english/">bab.la Finnish-English dictionary </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.suomienglantisanakirja.fi/english.php">Suomienglantisanakirja.fi</a>
+            </li>
+          </ul>
+        </div>
+        <div class="category">
+          <h2><a name="c3">Misc</a></h2>
+          <h3><a name="g6">Test</a></h3>
+          <ul>
+            <li>
+              <a href="http://vocabulary.ugent.be/">Word test</a>
+              <span class="comment">Ghent University, Center for Reading Research</span>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.endangeredlanguages.com/">Endangered Languages</a>
+            </li>
+          </ul>
+        </div>
+        <div class="category">
+          <h2><a name="c4">Programming</a></h2>
+          <h3><a name="g7">Languages</a></h3>
+          <ul>
+            <li>
+              <a href="https://www.adaic.org/">Ada</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/ALGOL">ALGOL</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://aplwiki.com/">APL</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/BASIC">BASIC</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.iso.org/standard/74528.html">C</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://isocpp.org/">C++</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C#</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation">Classic Visual Basic</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/COBOL">COBOL</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.erlang.org/">Erlang</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://forth-standard.org/">Forth</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://fortran-lang.org/">Fortran</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://go.dev/">Go</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.haskell.org/">Haskell</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://oracle.com/java/">Java</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">JavaScript</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://kotlinlang.org/">Kotlin</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.lua.org/">Lua</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.mathworks.com/products/matlab.html">MATLAB</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/ML_(programming_language)">ML</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Object_Pascal">Object Pascal</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Pascal_(programming_language)">Pascal</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.perl.org/">Perl</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.php.net/">PHP</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.iso.org/standard/21413.html">Prolog</a>
+              / <a href="https://www.iso.org/standard/20775.html">Part 2</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.python.org/">Python</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.r-project.org/">R</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.ruby-lang.org/">Ruby</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.rust-lang.org/">Rust</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.iso.org/standard/63555.html">SQL</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://scratch.mit.edu/">Scratch</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Shell_script">Shell script</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://www.simula67.info/">Simula</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Smalltalk">Smalltalk</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://developer.apple.com/swift/">Swift</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://docs.microsoft.com/dotnet/visual-basic/">Visual Basic</a>
+            </li>
+          </ul>
+          <h3><a name="g8">VCS</a></h3>
+          <ul>
+            <li>
+              <a href="https://www.gnu.org/software/rcs/">RCS</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://cvs.nongnu.org/">CVS</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://subversion.apache.org/">Subversion</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://www.mercurial-scm.org/">Mercurial</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="https://git-scm.com/">Git</a>
+              / <a href="https://git-scm.com/docs/">Reference</a>
+              / <a href="https://git-scm.com/book/en/v2/">Book</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">2023-05-04 12:46:50 +0000</div>
+  </body>
+</html>

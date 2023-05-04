@@ -1,0 +1,18 @@
+{
+  "dockerComposeFile": [
+    "../docker/bookmark-gen-dev/compose.yml"
+  ],
+  "service": "ws",
+  "overrideCommand": true,
+  "workspaceFolder": "/bookmark-gen",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Docker
+        "ms-azuretools.vscode-docker",
+        // markdownlint
+        "DavidAnson.vscode-markdownlint"
+      ]
+    }
+  }
+}
