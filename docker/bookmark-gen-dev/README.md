@@ -12,10 +12,10 @@ To build image:
 
 To start shell:
 
-    docker run -it --rm -v $PWD/../..:/bookmark-gen -w /bookmark-gen bookmark-gen-dev
+    docker run -it --rm -v $PWD/../..:/bookmark-gen -w /bookmark-gen bookmark-gen-dev sh
 
 ## With Docker Compose
 
 To start shell:
 
-    docker compose run --rm ws
+    docker compose run --rm ws sh
