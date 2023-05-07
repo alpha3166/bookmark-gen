@@ -1,8 +1,9 @@
-FROM ruby:alpine
+FROM ruby
 ARG USERNAME=me
-RUN addgroup -g 1000 $USERNAME && \
-    adduser -u 1000 -G $USERNAME -D $USERNAME
-RUN apk --update-cache add sudo && \
+RUN groupadd --gid 1000 $USERNAME && \
+    useradd --uid 1000 --gid $USERNAME --create-home --shell /bin/bash $USERNAME
+RUN apt update && \
+    apt install --yes sudo && \
     echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USERNAME
-RUN apk add git less
+RUN apt install --yes vim
 USER $USERNAME
