@@ -7,3 +7,5 @@ services:
     volumes:
       - ../..:/bookmark-gen
     working_dir: /bookmark-gen
+    environment:
+      TZ: Asia/Tokyo
